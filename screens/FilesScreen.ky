@@ -1,0 +1,14 @@
+<FilesScreen>
+    name: "FilesScreen"
+
+    FullNavBar:
+
+    Label:
+        text: "my FilesScreen"
+        font_size: 32
+
+    MDRaisedButton:
+        text: "UPDATE TABLE"
+        on_release:
+            root.open_table()
+

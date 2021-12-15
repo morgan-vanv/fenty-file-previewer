@@ -1,0 +1,8 @@
+<SettingsScreen>:
+    name: "SettingsScreen"
+
+    FullNavBar
+
+    Label:
+        text: "SettingsScreen"
+        font_size: 32
