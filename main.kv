@@ -3,6 +3,7 @@ MDScreen:
     MDNavigationLayout:
 
         ScreenManager:
+            id: screen_manager
 
             MDScreen:
 
@@ -39,7 +40,7 @@ MDScreen:
                             text: "Settings"
                             on_press:
                                 #root.nav_drawer.set_state("close")
-                                #app.show_home_screen()
+                                app.show_settings_screen()
                             IconLeftWidget:  # Icons on NavDrawer
                                 icon: 'cog'
                                 id: icon
