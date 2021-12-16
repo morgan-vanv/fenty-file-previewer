@@ -1,4 +1,6 @@
 from kivy.lang import Builder
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.floatlayout import FloatLayout
 
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
@@ -43,8 +45,14 @@ class FentyFilePreviewer(MDApp):
         self.screen_manager.add_widget(self.settings_screen)
 
         # Loading main layout
-        self.main_layout = Builder.load_file('main.kv')
-        self.main_layout.add_widget(self.screen_manager)
+        self.main_layout = BoxLayout(orientation='vertical')
+        self.main_layout = FloatLayout()
+        #self.main_layout = Builder.load_file('main.kv')
+        #self.main_layout.add_widget(self.screen_manager)
+        self.navbar = Builder.load_file('main.kv')
+        self.main_layout.add_widget(self.navbar)
+        self.main_layout.add_widget(self.screen_manager, 20)
+
         return self.main_layout
 
     # PAGE NAVIGATION GOES HERE
